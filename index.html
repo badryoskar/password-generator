@@ -12,8 +12,44 @@
     
     <section class="container">
         <div class="container__heading">
-            <h1>Generate a </br> <span class="green-text"> random password </span> </h1>
+            <h1>Generate a </br> <span class="green-text"> random password </span>🔒 </h1>
             <p>Never use an unsecure password again.</p>
+        </div>
+        <div class="container__settings">
+            <div class="first-row">
+                <label> Enter Password Length : </label>
+                <input type="number" id="length" min="8" max="15" value="15">
+            </div>
+            <div class="wrapper__setting">
+                <div class="advanced__settings">
+                    <label for="toggleSwitch">Uppercase letters :</label>
+                    <label class="switch">
+                    <input type="checkbox" id="toggleSwitch">
+                    <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="advanced__settings">
+                    <label for="toggleSwitch">Lowercase letters :</label>
+                    <label class="switch">
+                    <input type="checkbox" id="toggleSwitch">
+                    <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="advanced__settings">
+                    <label for="toggleSwitch">Add Numbers :</label>
+                    <label class="switch">
+                    <input type="checkbox" id="toggleSwitch">
+                    <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="advanced__settings">
+                    <label for="toggleSwitch">Add Symbols :</label>
+                    <label class="switch">
+                    <input type="checkbox" id="toggleSwitch">
+                    <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
         </div>
         <div class="container__buttons">
             <button class="generate-btn">Generate password</button>
