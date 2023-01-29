@@ -24,43 +24,47 @@
                 <div class="advanced__settings">
                     <label for="toggleSwitch">Uppercase letters :</label>
                     <label class="switch">
-                    <input type="checkbox" id="toggleSwitch">
+                    <input type="checkbox" id="uppercase" checked>
                     <span class="slider"></span>
                     </label>
                 </div>
                 <div class="advanced__settings">
                     <label for="toggleSwitch">Lowercase letters :</label>
                     <label class="switch">
-                    <input type="checkbox" id="toggleSwitch">
+                    <input type="checkbox" id="lowercase" checked>
                     <span class="slider"></span>
                     </label>
                 </div>
                 <div class="advanced__settings">
                     <label for="toggleSwitch">Add Numbers :</label>
                     <label class="switch">
-                    <input type="checkbox" id="toggleSwitch">
+                    <input type="checkbox" id="numbers" checked>
                     <span class="slider"></span>
                     </label>
                 </div>
                 <div class="advanced__settings">
                     <label for="toggleSwitch">Add Symbols :</label>
                     <label class="switch">
-                    <input type="checkbox" id="toggleSwitch">
+                    <input type="checkbox" id="symbols" checked>
                     <span class="slider"></span>
                     </label>
                 </div>
             </div>
         </div>
         <div class="container__buttons">
-            <button class="generate-btn">Generate password</button>
-            <button class="clear-btn">Clear screen</button>
+            <button id="generate" onclick="renderPasswords()">Generate password</button>
+            <button class="clear" onclick="clearPasswords()">Clear screen</button>
         </div>
         <hr class="container__separator">
         <div class="container__result">
-            <input type="text" class="gen-pwd-one">
-            <input type="text" class="gen-pwd-two">
+            <input type="text" id="password1-el">
+            <input type="text" id="password2-el">
+            <span id="result"></span>
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+    <script src="/assets/js/index.js"></script>
 
 </body>
 </html>
