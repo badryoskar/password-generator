@@ -70,3 +70,10 @@ password2El.addEventListener("click", function() {
     document.execCommand("copy")
     alert("Second Password copied to clipboard!");
 });
+
+// Toogle dark & light
+
+let sun = document.getElementById("sun");
+sun.onclick = function() {
+    sun.classList.toggle("night");
+}
