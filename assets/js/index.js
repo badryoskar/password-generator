@@ -72,8 +72,16 @@ password2El.addEventListener("click", function() {
 });
 
 // Toogle dark & light
-
+let container = document.querySelector('.container');
 let sun = document.getElementById("sun");
 sun.onclick = function() {
+    console.log(container)
+
     sun.classList.toggle("night");
+    if(sun.classList.contains('night')) {
+        container.setAttribute('data-theme', 'dark');
+    }
+    else {
+        container.removeAttribute('data-theme');
+    }
 }

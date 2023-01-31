@@ -1,6 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+/*** Light Mode Theme ***/
+:root, [data-theme="default"] {
+    --card-bg-color: #ECFDF5;
+    --card-border-color:  #10B981;
+    --button-box-bg-color: #2B283A;
+    --sun-bg-color: #e7ff1f;
+    --sun-border-color: #2B283A;
+    --sun-div-bg-color: #e7ff1f;
+    --sun-after-bg-color: #2B283A;
+    --heading-h1-color: #2B283A;
+    --paragraph-color: #6B7280;
+    --green-text: #10B981;
+    --settings-color: #273549;
+    --button-bg-color: #10B981;
+    --button-bg-hover: #273549;
+    --button-text-color: #fff;
+    --button-text-color-hover: #fff;
+    --separator-color: rgba(58, 56, 56, 0.123);
+    --input-bg-color: #273549;
+    --input-border-color: rgba(255, 255, 255, 0.252);
+    --input-text-color: #55F991;
+    --switch-slider-color: #ccc;
+    --switch-slider-before-color: #fff;
+    --input-checked-bg-color: #10B981;
+    --input-focus-bg-color: #10B981;
+}
+
+/*** Dark Mode Theme ***/
+[data-theme="dark"] {
+    --card-bg-color: #1F2937;
+    --card-border-color: #10B981;
+    --button-box-bg-color: #10B981;
+    --sun-bg-color: #fff;
+    --sun-border-color: #10B981;
+    --sun-div-bg-color: #fff;
+    --sun-after-bg-color: #10B981;
+    --heading-h1-color: #fff;
+    --paragraph-color: #D5D4D8;
+    --green-text: #4ADF86;
+    --settings-color: aliceblue;
+    --button-bg-color: #10B981;
+    --button-bg-hover: #273549;
+    --button-text-color: #fff;
+    --button-text-color-hover: #fff;
+    --separator-color: rgba(255, 255, 255, 0.418);
+    --input-bg-color: #273549;
+    --input-border-color: rgba(255, 255, 255, 0.252);
+    --input-text-color: #55F991;
+    --switch-slider-color: #ccc;
+    --switch-slider-before-color: #fff;
+    --input-checked-bg-color: #10B981;
+    --input-focus-bg-color: #10B981;
+}
+
+
 
 * {
     margin: 0 auto;
@@ -9,11 +64,11 @@
 
 .container {
     width: 440px;
-    border: 6px solid #10B981;
+    border: 6px solid var(--card-border-color);
     padding: 70px 52px;
     display: flex;
     flex-direction: column;
-    background: #1F2937;
+    background: var(--card-bg-color);
     margin-top: 50px;
     border-radius: 10px;
     position: relative;
@@ -22,7 +77,7 @@
 .button-box {
     width: 45px;
     height: 45px;
-    background: #10B981;
+    background: var(--button-box-bg-color);
     border-radius: 50%;
     position: absolute;
     top: 10px;
@@ -37,16 +92,16 @@
 .sun {
     width: 15px;
     height: 15px;
-    background: #fff;
+    background: var(--sun-bg-color);
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    border: 2px solid #10B981;
+    border: 2px solid var(--sun-border-color);
 }
 
 .sun div {
     height: 2px;
-    background: #fff;
+    background: var(--sun-div-bg-color);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,12 +133,12 @@
     content: '';
     width: 15px;
     height: 15px;
-    background: #10B981;
+    background: var(--sun-after-bg-color);
     border-radius: 50%;
     position: absolute;
     top: -16px;
     right: -16px;
-    transition: 0.5s;
+    transition: 0.01s;
 }
 
 .sun.night::after {
@@ -106,7 +161,7 @@
     font-family: 'Karla';
     line-height: 40px;
     letter-spacing: -0.025em;
-    color: white;
+    color: var(--heading-h1-color);
 }
 
 .container__heading p {
@@ -114,17 +169,17 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
-    color: #D5D4D8;
+    color: var(--paragraph-color);
 }
 
 .green-text {
-    color: #4ADF86;
+    color: var(--green-text);
 }
 
 .container__settings {
     margin-left: 0;
     margin-bottom: 15px;
-    color: aliceblue;
+    color: var(--settings-color);
     font-family: 'Inter';
 }
 
@@ -139,11 +194,11 @@
 button {
     width: 191px;
     height: 42px;
-    background: #10B981;
+    background: var(--button-bg-color);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     border-radius: 6px;
     border: none;
-    color: #fff;
+    color: var(--button-text-color);
     font-family: 'Inter';
     font-size: 16px;
     font-weight: 500;
@@ -152,24 +207,24 @@ button {
 }
 
 button:hover {
-    background: #fff;
-    color: #273549;
+    background: var(--button-bg-hover);
+    color: var(--button-text-color-hover);
 }
 
 .container__separator {
     margin: 35px 0;
-    border: 1px solid rgba(255, 255, 255, 0.418);
+    border: 1px solid var(--separator-color);
 }
 
 input {
     width: 211px;
     height: 39px;
-    background: #273549;
+    background: var(--input-bg-color);
     box-sizing: border-box;
     padding: 1em;
-    border: 1px solid rgba(255, 255, 255, 0.252);
+    border: 1px solid var(--input-border-color);
     border-radius: 4px;
-    color: #55F991;
+    color: var(--input-text-color);
     font-family: 'Inter';
     font-size: 16px;
     font-weight: 500;
@@ -221,7 +276,7 @@ label[for="toggleSwitch"] {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--switch-slider-color);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -233,17 +288,17 @@ label[for="toggleSwitch"] {
     width: 20px;
     left: 2px;
     bottom: 3px;
-    background-color: white;
+    background-color: var(--switch-slider-before-color);
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 input:checked + .slider {
-    background-color: #10B981;
+    background-color: var(--input-checked-bg-color);
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #10B981;
+    box-shadow: 0 0 1px var(--input-focus-bg-color);
 }
 
 input:checked + .slider:before {
